@@ -23,7 +23,7 @@ object E6_RecordsList extends App {
   implicit def listShow[T](implicit typeclass: Show[T]): Show[List[T]] = new Show[List[T]] {
     def show(x: List[T]): String =
       s"""[
-         |   ${x.map { e => e.show }.mkString(",\n  ")}
+         |  ${x.map { e => e.show }.mkString(",\n  ")}
          |]""".stripMargin
   }
 
