@@ -1,8 +1,17 @@
 package typeclasswebinar.e3.cats
 
-import cats._
-import cats.syntax.all._
+// Since data and behaviours on it are agnostic one of another,
+// they can be decoupled to different libraries.
 
+// Cats is a library that defines behaviours common to various
+// 3rd party data.
+
+import cats._             // Type classes reside in the `cats` package
+import cats.syntax.all._  // Syntax wrappers reside there
+
+// A 3rd party library no longer needs to define the type classes and
+// the syntax wrappers. It takes them from Cats instead and focuses on the
+// data and concrete implementation of the behaviours.
 object Phonebook {
   case class Record(firstName: String, lastName: String, phone: String)
 

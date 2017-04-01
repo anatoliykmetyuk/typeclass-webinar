@@ -1,5 +1,6 @@
 package typeclasswebinar.e1.hierarchy
 
+// The library
 object Phonebook {
   trait ToJson { def toJson: String }
 
@@ -15,7 +16,9 @@ object E1_RecordsSingle extends App {
   println(record.toJson)
 }
 
-// List of records serialization
+// List of records serialization.
+// How do we integrate `toJson` behavior with the `List` class
+// of the core Scala library?
 object E2_RecordsList extends App {
   val records = List(
     Record("John", "Smith"  , "0123456789"),
